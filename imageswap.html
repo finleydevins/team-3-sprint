@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>Tech Consulting</title>
+<!-- CSS-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <link rel="stylesheet" href="imageswap.css">
+    
+   <style>
+        .gallery {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            cursor: pointer;
+            width: 100px;
+            height: 100px;
+            margin: 0 10px;
+            border: 2px solid transparent;
+            transition: transform 0.3s, border 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+            border: 2px solid orange;
+        }
+
+        .main-image {
+            display: block;
+            margin: 0 auto;
+            max-width: 650px;
+            max-height: 400px;
+        }
+    </style> 
+    
+    
+    
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="information.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js">
+    <title> Image Gallery Swap</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    </script>
+    
+    
+    
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+    $(document).ready(function(){
+    $('.materialboxed').materialbox();
+  });
+    </script>
+    
+    
+    
+        <meta charset="utf-8">
+    <title>Costume Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+        function calculatePrice() {
+            // Get user entries
+            let ghost = document.getElementById("ghost").value.toLowerCase();  // "y" or "n"
+            let adult = document.getElementById("adult").value.toLowerCase();  // "y" or "n"
+            let used = document.getElementById("used").value.toLowerCase();    // "y" or "n"
+            
+            let price = 0;  // Initialize price
+
+            // Ohio resident and ghost costume
+            if (ghost == "y") {
+                price += 20;  // Ghost costume price
+            } else {
+                price += 15;  // Non-ghost costume price
+            }
+
+            // Adult costume
+            if (adult == "y") {
+                price += 10;  // Adult costume price
+            } else {
+                price += 5;   // Non-adult costume price
+            }
+
+            // Used costume
+            if (used == "y") {
+                price += 5;   // Used costume discount
+            } else {
+                price += 15;  // Non-used costume price
+            }
+
+            // Display the result in the 'price' field
+            document.getElementById("price").value = `$${price.toFixed(2)}`; // Format the price to 2 decimal places
+        }
+
+        function clearPrice() {
+            document.getElementById("ghost").value = "";
+            document.getElementById("adult").value = "";
+            document.getElementById("used").value = "";
+            document.getElementById("price").value = "";  // Clear the displayed price
+            document.getElementById("ghost").focus();
+        }
+    </script>
+    
+    
+    </head>
+<body> 
+    
+       <!-- navigation bar -->
+    
+    <nav class="" role="navigation ">
+        <div class="nav-wrapper orange"><a id="logo-container" href="#" class="brand-logo"><i class="large material-icons"></i><img id="logoimage" src="SixorTreat.png" width=60% height=63px></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href=index.html>Home</a></li>
+                <li><a href="information.html">Info</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="imageswap.html">Images</a></li>
+            </ul>
+
+            <ul id="nav-mobile" class="sidenav">
+               <li><a href=index.html>Home</a></li>
+                <li><a href="#information">Info</a></li>
+                <li><a href="#FAQ">FAQ</a></li>
+                <li><a href="#About Us">About</a></li>
+                <li><a href="#Contact Us">Contact Us</a></li>
+                <li><a href="#Images">Images</a></li>
+            </ul>
+        </div>
+    </nav>
+    <body>
+     <div class="container">
+        <h1 class="center-align"></h1>
+        <!-- Main Image -->
+        <img id="mainImage" class="main-image" src="costume.jpg" alt="Main Display">
+
+        <!-- Thumbnails -->
+        <div class="gallery">
+            <img class="thumbnail" src="costume.jpg" alt="Image 1" data-full="costume.jpg">
+            <img class="thumbnail" src="kiddos.jpg" alt="Image 2" data-full="kiddos.jpg">
+            <img class="thumbnail" src="3women.jpg" alt="Image 3" data-full="3women.jpg">
+            <img class="thumbnail" src="cat.jpg" alt="Image 4" data-full="cat.jpg">
+             <img class="thumbnail" src="peanuts.jpg" alt="Image 5" data-full="peanuts.jpg">
+        </div>
+    </div>
+<section>
+        <h1>COSTUME CALCULATOR</h1>
+        <label for="ghost">Ghost Costume? (y or n): </label>
+        <input type="text" id="ghost" placeholder="y or n"><br>
+
+        <label for="adult">Adult Costume? (y or n): </label>
+        <input type="text" id="adult" placeholder="y or n"><br>
+
+        <label for="used">Used Costume? (y or n): </label>
+        <input type="text" id="used" placeholder="y or n"><br>
+
+        <label for="price">Price: </label>
+        <input type="text" id="price" disabled="disabled"><br>
+
+        <input type="button" id="calculate" value="Calculate" onclick="calculatePrice()">
+        <input type="button" id="clear" value="Clear" onclick="clearPrice()"><br>
+    </section>
+    <script>
+        // Select main image and thumbnails
+        const mainImage = document.getElementById('mainImage');
+        const thumbnails = document.querySelectorAll('.thumbnail');
+
+        // Add click event to each thumbnail
+        thumbnails.forEach(thumb => {
+            thumb.addEventListener('click', () => {
+                // Change the main image src to the thumbnail's data-full attribute
+                mainImage.src = thumb.getAttribute('data-full');
+            });
+        });
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </body>

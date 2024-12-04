@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>Tech Consulting</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link rel="stylesheet" href="index.css">
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+            $('.slider').slider();
+        });
+    </script>
+</head>
+
+<body id="home">
+
+    <!-- Navigation Bar -->
+    <nav class="" role="navigation">
+        <div class="nav-wrapper orange">
+            <a id="logo-container" href="#" class="brand-logo">
+                <img id="logoimage" src="SixorTreat.png" width="60%" height="63px">
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="information.html">Info</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+
+            <ul id="nav-mobile" class="sidenav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#information">Info</a></li>
+                <li><a href="#FAQ">FAQ</a></li>
+                <li><a href="#About Us">About</a></li>
+                <li><a href="#Contact Us">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Image Slider -->
+    <section class="slider">
+    <ul class="slides">
+        <li>
+            <img src="barn.jpg"> <!-- random image -->
+        </li>
+        <li>
+            <img src="ghostpattern.jpg"> <!-- random image -->
+        </li>
+        <li>
+            <img src="graphic.jpg"> <!-- random image -->
+        </li>
+        <li>
+            <img src="sidewalk.jpg"> <!-- random image -->
+        </li>
+        <li>
+            <img src="ghostpattern2.jpg"> <!-- your 5th image -->
+        </li>
+    </ul>
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-copyright">
+            © IMS 222 Sprint #3, 2024
+        </div>
+    </footer>
+
+</body>
+
+</html>
